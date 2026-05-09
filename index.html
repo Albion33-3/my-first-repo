@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>张桓溥 · 名片</title>
+<link rel="icon" type="image/jpeg" href="panda.jpeg" />
+<style>
+  :root {
+    --bg1: #f5f7fa;
+    --bg2: #e4e8ef;
+    --card-bg: #ffffff;
+    --text: #1f2937;
+    --sub: #6b7280;
+    --accent: #111827;
+    --btn: #111827;
+    --btn-text: #ffffff;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(160deg, var(--bg1), var(--bg2));
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    min-height: 100vh;
+  }
+  .card {
+    width: 100%;
+    max-width: 360px;
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 36px 28px 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .avatar-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eee;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  .avatar-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .name {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0 0 6px;
+    color: var(--accent);
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--sub);
+    margin-bottom: 26px;
+    letter-spacing: 1px;
+  }
+  .phone {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--btn);
+    color: var(--btn-text);
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: transform 0.06s ease, opacity 0.2s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn + .btn { margin-top: 10px; }
+  .btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid #d1d5db;
+  }
+  .foot {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg1: #0f1115;
+      --bg2: #1a1d23;
+      --card-bg: #1f232b;
+      --text: #e5e7eb;
+      --sub: #9ca3af;
+      --accent: #f9fafb;
+      --btn: #f9fafb;
+      --btn-text: #111827;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .btn.secondary { border-color: #3f434c; color: var(--accent); }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="avatar-wrap">
+      <img src="panda.jpeg" alt="头像" />
+    </div>
+    <h1 class="name">张桓溥</h1>
+    <div class="subtitle">给您造成不便请谅解</div>
+    <div class="phone">📱 18691777177</div>
+    <a class="btn" href="tel:18691777177">拨打电话</a>
+    <a class="btn secondary" href="sms:18691777177">发送短信</a>
+    <div class="foot">扫码即见，简单直接</div>
+  </main>
+</body>
+</html>
